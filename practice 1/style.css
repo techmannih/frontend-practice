@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px ;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+body {
+  width: 100%;
+}
+
+
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: lightpink;
+    box-shadow: 0 5px 15px rgb(19, 11, 11);
+    height: 12vh;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+#navbar{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    /* padding: 5px; */
+    justify-content: center;
+}
+
+#navbar li{
+    padding: 0 20px;
+    position: relative;
+
+}
+#navbar li a{
+     text-decoration: none;  /*    link k uper se underline htayi hai*/
+     font-size: 16px;
+     font-weight: 600;
+     color:black;
+     transition: 0.3 ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+     color: rgb(247, 8, 107);
+
+}
+#navbar li a:active::after,
+#navbar li a:hover::after
+{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(247, 8, 107);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#hero{
+    background-image: url("img/hero4.png");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178 ;
+}
+
+#hero button{
+    background-image: url("img/button.png");
+background-color: transparent;
+color: #088178;
+border: 0;
+padding: 14px 80px 14px 65px;
+background-repeat: no-repeat;
+cursor: pointer;
+font-size: 15px;
+font-weight: 700;
+}
+
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 10px 0;
+    
+
+
+}
+
+#feature .fe-box:hover{
+    box-shadow: 15px 15px 54px rgba(0, 0, 15, 0.1);
+    color: black;
+}
+ #feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     flex-wrap: wrap;          /*    for gap between them  */
+    /* margin: 10px; */
+ }
+
+ #feture .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+
+ }
+ #feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+ }
+
+ #feature .fe-box:nth-child(2) h6{
+background-color: #cdebbc;
+ }
+
+ #feature .fe-box:nth-child(3) h6{
+ background-color: #d1e8f2;
+     }
+
+#feature .fe-box:nth-child(4) h6{
+background-color: #cdd4f8;
+         }
+
+#feature .fe-box:nth-child(5) h6{
+
+background-color: #f6dbf6;
+             }        
+
+#feature .fe-box:nth-child(6) h6{
+ background-color: #fff2e5;
+   }
+
+
+.for{
+    text-align: center;
+}
+#product1 {
+    
+    
+}
+
+.pro{
+    width: 21.3%;
+    min-width: 250px;
+    padding:  10px 10px;
+    margin: 15px 20px;
+    border: 2px solid#f4f8de;
+     border-radius: 20px;
+     cursor: pointer;
+     color: #f6dbf6;
+position: relative;    
+transition: 0.2s ease;
+}
+
+.pro:hover{
+    box-shadow: 30px 30px 35px rgba(0, 0, 0, 0.09);
+}
+.pro img{
+    
+    width: 100%;
+    border-radius: 20px;
+}
+#product1 .container{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+.pro.des span{
+    color: gray;
+    font-size: 12px;
+}    
+
+.pro h4{
+  color: #1cb9af;
+  /* padding: 4px; */
+}
+
+/* .pro .fa-solid fa-cart-shopping{
+color: black;
+width: 40px;
+height: 40px;
+line-height: 40px;
+border-radius: 50px;
+background-color: #e8f6ea;
+font-weight: 500;
+color: #4caf54;
+border: ipx solid #8fee97;
+
+} */
+
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+  text-align: center;
+  background-image: url("img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+width: 100%;
+height: 30vh;
+}
+
+#banner h4{
+color: white;
+font-size:16px ;
+}
+#banner h2{
+  color: white;
+  font-size: 40px;
+  padding: 10px;
+}
+#banner h2 span{
+  color: red;
+}
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 20px;
+  color: black;
+  background-color: white;
+  border-radius: 4px ;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+
+
+
+#banner button:hover{
+  background-color: #1cb9af;
+  color: white;
+}
+
+
+
+#sm-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 50px;
+  /* padding: 20px; */
+}
+#sm-banner .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  /* align-items: center; */
+  /* text-align: center; */
+  background-image: url("img/b17.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+min-width: 580px;
+
+height: 50vh; 
+padding: 30px;
+}
+
+#sm-banner button:hover{
+  background-color: #1cb9af;
+  color: white;}
+  
+  
+  #sm-banner  h4{
+ color: white;
+ font-size: 20px;
+ font-weight: 300;
+  }
+
+  #sm-banner h2{
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+     }
+   .banner-box span{
+ color: white;
+ font-size: 14px;
+ font-weight: 500;
+ padding-bottom: 15px;
+
+   }
+
+   button.white{
+    width: 20vh;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 12px 18px;
+    color:white;
+    background-color:transparent;
+    /* border-radius: 4px ; */
+    cursor: pointer;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.2s;
+  }
+
+  .banner-box:hover button{
+    background-color: #1cb9af;
+    border: 1px solid #1cb9af;
+  }
+
+
+  #sm-banner .banner-box2{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    /* align-items: center; */
+    /* text-align: center; */
+    background-image: url("img/b10.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  min-width: 580px;
+  
+  height: 50vh; 
+  padding: 30px;
+  }
+  
+  #sm-banner button:hover{
+    background-color: #1cb9af;
+    color: white;}
+    
+    
+    #sm-banner  h4{
+   color: white;
+   font-size: 20px;
+   font-weight: 300;
+    }
+  
+    #sm-banner h2{
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+       }
+     .banner-box2 span{
+   color: white;
+   font-size: 14px;
+   font-weight: 500;
+   padding-bottom: 15px;
+  
+     }
+  
+     button.white{
+      width: 20vh;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px 18px;
+      color:white;
+      background-color:transparent;
+      /* border-radius: 4px ; */
+      cursor: pointer;
+      border: 1px solid white;
+      outline: none;
+      transition: 0.2s;
+    }
+  
+    .banner-box2:hover button{
+      background-color: #1cb9af;
+      border: 1px solid #1cb9af;
+    }
+  
+
+
+    #banner3{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 80px;
+    }
+  
+    #banner3 .banner-box{
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-start ;
+      /* align-items: center; */
+      /* text-align: center; */
+    
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    min-width: 28%;
+    
+    height: 30vh; 
+    padding: 20px;
+    margin-bottom: 20px; 
+    }
+    #banner3 h2{
+      color: white;
+      font-size: 22px;
+      /* padding: 20px; */
+      font-weight: 900;
+    }
+
+    #banner3 h3{
+      
+      color: red;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+.forpadding{
+  padding: 45px 0;
+}
+
+#newslatter{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("img/b14.png");
+background-repeat: no-repeat;
+background-position: 20% 30%;
+background-color: #041e42;
+}
+
+.newstext h4{
+  color: white;
+      font-size: 22px;
+      font-weight: 700;
+}
+
+.newstext p{
+  color: #b7dbe4;
+      font-size: 15px;
+      font-weight: 600;
+}
+
+.newstext span{
+  color: yellow;
+}
+
+
+.form input{
+  height: 3.125rem;
+  padding: 0 1.2em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius:  4px; ;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+
+button.signup{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 20px;
+  color: white;
+  background-color: #088178;
+  border-radius: 4px ;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+
+
+
+#newslatter button:hover{
+  background-color: white;
+  color: black;
+}
+#newslatter .form{
+  display: flex;
+  width: 40%;
+}
+
+
+
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  margin-bottom: 20px;
+  
+}
+footer .logo{
+  margin-bottom: 30px;
+
+}
+
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+
+}
+
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+
+  margin: 0 0 10px 0;
+  
+}
+.copyright{
+  text-align: center;
+}
+
+footer.follow{
+  margin-top: 20px;
+
+}
+footer .follow i {
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+
+}
+
+.row img{
+  border: 1px solid #088178;
+  border-radius: 6px;
+
+}
+intall.img
+{
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover
+{
+  color: #088178;
+}
+
+
+@media(max-width:799px){
+  #navbar{
+    display:flex ;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+
+}
